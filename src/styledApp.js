@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+margin: 0 auto;
   max-width: 386px;
-  height: 648px;
-  margin: 100px auto;
   background: var(--background);
   display: block;
 `;
@@ -26,7 +25,7 @@ export const Buttons = styled.div`
   padding: 5.06px;
   justify-content: space-between;
   button {
-    height: 72.553px;
+    height: 66px;
     width: 93.9px;
     border: none;
     left: 767.663px;

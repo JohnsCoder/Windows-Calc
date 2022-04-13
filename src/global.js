@@ -9,16 +9,11 @@ export default createGlobalStyle`
   padding: 0;
 }
 body {
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #FFF456;
+  margin-top: 10vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 :root{
   --background: #797979;

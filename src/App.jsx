@@ -125,7 +125,7 @@ function App() {
 
   }
   function squareRoot() {
-    console.log(setValue(eval(`Math.sqrt(value, 2)`)))
+  setValue(eval(`Math.sqrt(value, 2)`))
   }
   function toNegative() {
 
