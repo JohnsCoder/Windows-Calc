@@ -4,155 +4,99 @@ import { Container, Visor, Buttons } from "./styledApp";
 function App() {
   const [value, setValue] = useState("0");
 
-  function zero() {
-    if (value === "0" || value === "NaN") {
-      return null;
-    } else {
-      setValue(value + "0");
-    }
-  }
-  function one() {
-    if (value === "0" || value === "NaN") {
-      return setValue("1");
-    } else setValue(value + "1");
-  }
-  function two() {
-    if (value === "0" || value === "NaN") {
-      return setValue("2");
-    } else setValue(value + "2");
-  }
-  function three() {
-    if (value === "0" || value === "NaN") {
-      return setValue("3");
-    } else setValue(value + "3");
-  }
-  function four() {
-    if (value === "0" || value === "NaN") {
-      return setValue("4");
-    } else setValue(value + "4");
-  }
-  function five() {
-    if (value === "0" || value === "NaN") {
-      return setValue("5");
-    } else setValue(value + "5");
-  }
-  function six() {
-    if (value === "0" || value === "NaN") {
-      return setValue("6");
-    } else setValue(value + "6");
-  }
-  function seven() {
-    if (value === "0" || value === "NaN") {
-      return setValue("7");
-    } else setValue(value + "7");
-  }
-  function eight() {
-    if (value === "0" || value === "NaN") {
-      return setValue("8");
-    } else setValue(value + "8");
-  }
-  function nine() {
-    if (value === "0" || value === "NaN") {
-      return setValue("9");
-    } else setValue(value + "9");
-  }
-  function plus() {
-    if (
-      value[value.length - 1] === "+" ||
-      value[value.length - 1] === "-" ||
-      value[value.length - 1] === "*" ||
-      value[value.length - 1] === "/" ||
-      value[value.length - 1] === "."
-    ) {
-      return null;
-    } else setValue(value + "+");
-  }
-  function minus() {
-    if (
-      value[value.length - 1] === "+" ||
-      value[value.length - 1] === "-" ||
-      value[value.length - 1] === "*" ||
-      value[value.length - 1] === "/" ||
-      value[value.length - 1] === "."
-    ) {
-      return null;
-    } else setValue(value + "-");
-  }
-  function multiply() {
-    if (
-      value[value.length - 1] === "+" ||
-      value[value.length - 1] === "-" ||
-      value[value.length - 1] === "*" ||
-      value[value.length - 1] === "/" ||
-      value[value.length - 1] === "."
-    ) {
-      return null;
-    } else setValue(value + "*");
-  }
-  function split() {
-    if (
-      value[value.length - 1] === "+" ||
-      value[value.length - 1] === "-" ||
-      value[value.length - 1] === "*" ||
-      value[value.length - 1] === "/" ||
-      value[value.length - 1] === "."
-    ) {
-      return null;
-    } else setValue(value + "/");
-  }
-  function dot() {
-    if (
-      value[value.length - 1] === "+" ||
-      value[value.length - 1] === "-" ||
-      value[value.length - 1] === "*" ||
-      value[value.length - 1] === "/" ||
-      value[value.length - 1] === "."
-    ) {
-      return null;
-    } else setValue(value + ".");
-  }
+  const one = () =>
+    value === "0" || value === "NaN" ? setValue("1") : setValue(value + "1");
+  const two = () =>
+    value === "0" || value === "NaN" ? setValue("2") : setValue(value + "2");
+  const three = () =>
+    value === "0" || value === "NaN" ? setValue("3") : setValue(value + "3");
+  const four = () =>
+    value === "0" || value === "NaN" ? setValue("4") : setValue(value + "4");
+  const five = () =>
+    value === "0" || value === "NaN" ? setValue("5") : setValue(value + "5");
+  const six = () =>
+    value === "0" || value === "NaN" ? setValue("6") : setValue(value + "6");
+  const seven = () =>
+    value === "0" || value === "NaN" ? setValue("7") : setValue(value + "7");
+  const eight = () =>
+    value === "0" || value === "NaN" ? setValue("8") : setValue(value + "8");
+  const nine = () =>
+    value === "0" || value === "NaN" ? setValue("9") : setValue(value + "9");
+  const zero = () =>
+    value === "0" || value === "NaN" ? {} : setValue(value + "0");
 
-  function percent () {
+  const plus = () =>
+    value[value.length - 1] === "+" ||
+    value[value.length - 1] === "-" ||
+    value[value.length - 1] === "*" ||
+    value[value.length - 1] === "/" ||
+    value[value.length - 1] === "."
+      ? {}
+      : setValue(value + "+");
 
-  }
+  const minus = () =>
+    value[value.length - 1] === "+" ||
+    value[value.length - 1] === "-" ||
+    value[value.length - 1] === "*" ||
+    value[value.length - 1] === "/" ||
+    value[value.length - 1] === "."
+      ? {}
+      : setValue(value + "-");
 
-  function splitOne() {
-    setValue(1 / value)
+  const multiply = () =>
+    value[value.length - 1] === "+" ||
+    value[value.length - 1] === "-" ||
+    value[value.length - 1] === "*" ||
+    value[value.length - 1] === "/" ||
+    value[value.length - 1] === "."
+      ? {}
+      : setValue(value + "*");
 
-  }
-  function toSquare() {
-    setValue(value ** 2)
+  const split = () =>
+    value[value.length - 1] === "+" ||
+    value[value.length - 1] === "-" ||
+    value[value.length - 1] === "*" ||
+    value[value.length - 1] === "/" ||
+    value[value.length - 1] === "."
+      ? {}
+      : setValue(value + "/");
 
-  }
-  function squareRoot() {
-  setValue(eval(`Math.sqrt(value, 2)`))
-  }
-  function toNegative() {
+  const dot = () =>
+    value[value.length - 1] === "+" ||
+    value[value.length - 1] === "-" ||
+    value[value.length - 1] === "*" ||
+    value[value.length - 1] === "/" ||
+    value[value.length - 1] === "." ||
+    (value.includes(".") && !value.includes("."))
+      ? {}
+      : setValue(value + ".");
 
-  } 
+  const splitOne = () => setValue(1 / value);
+  const toSquare = () => setValue(value ** 2);
+  const squareRoot = () => setValue(eval(`Math.sqrt(value, 2)`));
+  const toNegative = () => (value[0] === "-" ? {} : setValue("-" + value));
+  const clean = () => setValue("0");
 
-  function clean() {
-    setValue("0");
-  }
+  const erase = () =>
+    value.length === 1
+      ? setValue("0")
+      : setValue(value.substring(0, value.length - 1));
 
-  function erase() {
-    if (value.length === 1) {
-      setValue("0");
-    } else
-    setValue(value.substring(0, value.length - 1));
-  }
-  function equal() {
-    setValue(eval(value))
-  }
+  const equal = () =>
+    value.includes(".")
+      ? setValue(eval(value).toFixed(1))
+      : setValue(eval(value));
 
+  function percent() {}
+  function clearValue() {}
   return (
     <Container>
-      <Visor type="text" value={value} readOnly/>
+      <Visor type="text" value={value} readOnly />
       <Buttons>
         <button className="func-button" onClick={percent}>
           %
         </button>
-        <button className="func-button" onClick={""}>
+        <button className="func-button" onClick={clearValue}>
           CE
         </button>
         <button className="func-button" onClick={clean}>
