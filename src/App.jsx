@@ -90,7 +90,7 @@ function App() {
   function percent() {}
   function clearValue() {}
   return (
-    <Container>
+    <>
       <Visor type="text" value={value} readOnly />
       <Buttons>
         <button className="func-button" onClick={percent}>
@@ -164,7 +164,7 @@ function App() {
         </button>
         <button onClick={equal}>=</button>
       </Buttons>
-    </Container>
+    </>
   );
 }
 
